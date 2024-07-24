@@ -57,7 +57,7 @@ const App = () => {
     <div className="App">
       <Toaster position="top-right" richColors />
       <h1>Task Manager</h1>
-      <form onSubmit={handleAddTask}>
+      <form className="formTask" onSubmit={handleAddTask}>
         <input
           type="text"
           value={newTask}

@@ -1,4 +1,5 @@
 import { Task } from "../interfaces/Task";
+import "../App.css"
 
 interface TaskListProps {
   tasks: Task[]
@@ -14,7 +15,7 @@ const TaskList = ({ tasks, handleDeleteTask, handleCompleteTask }: TaskListProps
   return (
     <>
       <h2>Tareas completadas</h2>
-      <ul>
+      <ul className="listTask">
         {completedTasks.length !== 0 ? completedTasks.map((task) => (
           <li key={task.id}>
             {task.title}
@@ -23,7 +24,7 @@ const TaskList = ({ tasks, handleDeleteTask, handleCompleteTask }: TaskListProps
         )) : <p>Aún no hay tareas</p>}
       </ul>
       <h2>Tareas incompletas</h2>
-      <ul>
+      <ul className="listTask">
         {incompletedTasks.length !== 0 ? incompletedTasks.map((task) => (
           <li key={task.id}>
             {task.title}
